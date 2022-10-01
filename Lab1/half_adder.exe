@@ -1,0 +1,81 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\va_math.vpi";
+S_000001bfde2c69f0 .scope module, "half_adder_top" "half_adder_top" 2 4;
+ .timescale -9 -9;
+v000001bfde39b200_0 .net "cry", 0 0, L_000001bfde39b2a0;  1 drivers
+v000001bfde2c8350_0 .var "exp_out", 1 0;
+v000001bfde2c83f0_0 .var "in_a", 0 0;
+v000001bfde2c8490_0 .var "in_b", 0 0;
+v000001bfde2c8530_0 .var/i "index", 31 0;
+v000001bfde2d43b0 .array "resp_data", 3 0, 5 0;
+v000001bfde2d4450_0 .net "sum", 0 0, L_000001bfde2c6b80;  1 drivers
+S_000001bfde39b660 .scope module, "half_adder" "half_adder" 2 36, 3 6 0, S_000001bfde2c69f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cry";
+L_000001bfde2c6b80 .functor XOR 1, v000001bfde2c83f0_0, v000001bfde2c8490_0, C4<0>, C4<0>;
+L_000001bfde39b2a0 .functor AND 1, v000001bfde2c83f0_0, v000001bfde2c8490_0, C4<1>, C4<1>;
+v000001bfde2a3010_0 .net "a", 0 0, v000001bfde2c83f0_0;  1 drivers
+v000001bfde39bc60_0 .net "b", 0 0, v000001bfde2c8490_0;  1 drivers
+v000001bfde2d5c50_0 .net "cry", 0 0, L_000001bfde39b2a0;  alias, 1 drivers
+v000001bfde39b7f0_0 .net "sum", 0 0, L_000001bfde2c6b80;  alias, 1 drivers
+    .scope S_000001bfde2c69f0;
+T_0 ;
+    %vpi_call 2 17 "$readmemh", "half_adder_stim.txt", v000001bfde2d43b0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001bfde2c69f0;
+T_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001bfde2c8530_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v000001bfde2c8530_0;
+    %cmpi/s 4, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %ix/getv/s 4, v000001bfde2c8530_0;
+    %load/vec4a v000001bfde2d43b0, 4;
+    %parti/s 2, 0, 2;
+    %split/vec4 1;
+    %store/vec4 v000001bfde2c8490_0, 0, 1;
+    %store/vec4 v000001bfde2c83f0_0, 0, 1;
+    %ix/getv/s 4, v000001bfde2c8530_0;
+    %load/vec4a v000001bfde2d43b0, 4;
+    %parti/s 2, 4, 4;
+    %store/vec4 v000001bfde2c8350_0, 0, 2;
+    %delay 10, 0;
+    %load/vec4 v000001bfde39b200_0;
+    %load/vec4 v000001bfde2d4450_0;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v000001bfde2c8350_0;
+    %cmp/ne;
+    %jmp/0xz  T_1.2, 4;
+    %vpi_call 2 30 "$display", "Output mismatch for entry ", v000001bfde2c8530_0, " expected ", v000001bfde2c8350_0, " but got cry and sum ", v000001bfde39b200_0, v000001bfde2d4450_0 {0 0 0};
+T_1.2 ;
+    %load/vec4 v000001bfde2c8530_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000001bfde2c8530_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %end;
+    .thread T_1;
+    .scope S_000001bfde2c69f0;
+T_2 ;
+    %vpi_call 2 41 "$dumpfile", "half_adder_waves.vcd" {0 0 0};
+    %vpi_call 2 42 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001bfde39b660 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "half_adder_top.v";
+    "half_adder.v";

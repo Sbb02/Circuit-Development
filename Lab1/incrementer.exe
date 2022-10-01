@@ -1,0 +1,181 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\Soham\Desktop\Study\CSE120~1\iverilog\lib\ivl\va_math.vpi";
+S_00000220fc54c4b0 .scope module, "incrementer_top" "incrementer_top" 2 4;
+ .timescale -9 -9;
+v00000220fc5b87c0_0 .net "cry", 0 0, L_00000220fc5bb380;  1 drivers
+v00000220fc5b9440_0 .var/i "exp_out", 31 0;
+v00000220fc5b8fe0_0 .var "in_a", 3 0;
+v00000220fc5b8860_0 .var "inc", 0 0;
+v00000220fc5b8540_0 .var/i "index", 31 0;
+v00000220fc5b8900_0 .net "sum", 3 0, L_00000220fc5b9260;  1 drivers
+S_00000220fc54e090 .scope module, "incrementer" "incrementer" 2 49, 3 16 0, S_00000220fc54c4b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 1 "inc";
+    .port_info 2 /OUTPUT 4 "y";
+    .port_info 3 /OUTPUT 1 "cry";
+L_00000220fc5bb5b0 .functor BUFZ 1, L_00000220fc5baa50, C4<0>, C4<0>, C4<0>;
+L_00000220fc5bb070 .functor BUFZ 1, L_00000220fc5bacf0, C4<0>, C4<0>, C4<0>;
+L_00000220fc5baf90 .functor BUFZ 1, L_00000220fc5bb540, C4<0>, C4<0>, C4<0>;
+L_00000220fc5bb460 .functor BUFZ 1, L_00000220fc55ada0, C4<0>, C4<0>, C4<0>;
+v00000220fc548180_0 .net *"_ivl_11", 0 0, L_00000220fc5bb5b0;  1 drivers
+v00000220fc5485e0_0 .net *"_ivl_15", 0 0, L_00000220fc5bb070;  1 drivers
+v00000220fc548680_0 .net *"_ivl_19", 0 0, L_00000220fc5baf90;  1 drivers
+v00000220fc5487c0_0 .net *"_ivl_24", 0 0, L_00000220fc5bb460;  1 drivers
+v00000220fc5b9c60_0 .net "a", 3 0, v00000220fc5b8fe0_0;  1 drivers
+v00000220fc5b8720_0 .net "cry", 0 0, L_00000220fc5bb380;  alias, 1 drivers
+v00000220fc5b94e0_0 .net "inc", 0 0, v00000220fc5b8860_0;  1 drivers
+v00000220fc5b9760_0 .net "s0", 0 0, L_00000220fc5b8360;  1 drivers
+v00000220fc5b8d60_0 .net "s1", 0 0, L_00000220fc5ba9e0;  1 drivers
+v00000220fc5b8cc0_0 .net "s10", 0 0, L_00000220fc55ada0;  1 drivers
+v00000220fc5b8180_0 .net "s2", 0 0, L_00000220fc5baa50;  1 drivers
+v00000220fc5b9120_0 .net "s3", 0 0, L_00000220fc5b85e0;  1 drivers
+v00000220fc5b9f80_0 .net "s4", 0 0, L_00000220fc5baf20;  1 drivers
+v00000220fc5b9b20_0 .net "s5", 0 0, L_00000220fc5bacf0;  1 drivers
+v00000220fc5b91c0_0 .net "s6", 0 0, L_00000220fc5b9300;  1 drivers
+v00000220fc5b9080_0 .net "s7", 0 0, L_00000220fc5bb2a0;  1 drivers
+v00000220fc5b8f40_0 .net "s8", 0 0, L_00000220fc5bb540;  1 drivers
+v00000220fc5b9ee0_0 .net "s9", 0 0, L_00000220fc5b8ae0;  1 drivers
+v00000220fc5b8220_0 .net "y", 3 0, L_00000220fc5b9260;  alias, 1 drivers
+L_00000220fc5b8360 .part v00000220fc5b8fe0_0, 3, 1;
+L_00000220fc5b85e0 .part v00000220fc5b8fe0_0, 2, 1;
+L_00000220fc5b9300 .part v00000220fc5b8fe0_0, 1, 1;
+L_00000220fc5b8ae0 .part v00000220fc5b8fe0_0, 0, 1;
+L_00000220fc5b9260 .concat8 [ 1 1 1 1], L_00000220fc5bb460, L_00000220fc5baf90, L_00000220fc5bb070, L_00000220fc5bb5b0;
+S_00000220fc54e220 .scope module, "half_adder_i0" "half_adder" 3 37, 3 6 0, S_00000220fc54e090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cry";
+L_00000220fc55ada0 .functor XOR 1, L_00000220fc5b8ae0, v00000220fc5b8860_0, C4<0>, C4<0>;
+L_00000220fc5bb2a0 .functor AND 1, L_00000220fc5b8ae0, v00000220fc5b8860_0, C4<1>, C4<1>;
+v00000220fc548cc0_0 .net "a", 0 0, L_00000220fc5b8ae0;  alias, 1 drivers
+v00000220fc548400_0 .net "b", 0 0, v00000220fc5b8860_0;  alias, 1 drivers
+v00000220fc548a40_0 .net "cry", 0 0, L_00000220fc5bb2a0;  alias, 1 drivers
+v00000220fc548ae0_0 .net "sum", 0 0, L_00000220fc55ada0;  alias, 1 drivers
+S_00000220fc554610 .scope module, "half_adder_i1" "half_adder" 3 43, 3 6 0, S_00000220fc54e090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cry";
+L_00000220fc5bb540 .functor XOR 1, L_00000220fc5b9300, L_00000220fc5bb2a0, C4<0>, C4<0>;
+L_00000220fc5baf20 .functor AND 1, L_00000220fc5b9300, L_00000220fc5bb2a0, C4<1>, C4<1>;
+v00000220fc548900_0 .net "a", 0 0, L_00000220fc5b9300;  alias, 1 drivers
+v00000220fc5484a0_0 .net "b", 0 0, L_00000220fc5bb2a0;  alias, 1 drivers
+v00000220fc5482c0_0 .net "cry", 0 0, L_00000220fc5baf20;  alias, 1 drivers
+v00000220fc548d60_0 .net "sum", 0 0, L_00000220fc5bb540;  alias, 1 drivers
+S_00000220fc550c50 .scope module, "half_adder_i2" "half_adder" 3 49, 3 6 0, S_00000220fc54e090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cry";
+L_00000220fc5bacf0 .functor XOR 1, L_00000220fc5b85e0, L_00000220fc5baf20, C4<0>, C4<0>;
+L_00000220fc5ba9e0 .functor AND 1, L_00000220fc5b85e0, L_00000220fc5baf20, C4<1>, C4<1>;
+v00000220fc5489a0_0 .net "a", 0 0, L_00000220fc5b85e0;  alias, 1 drivers
+v00000220fc548540_0 .net "b", 0 0, L_00000220fc5baf20;  alias, 1 drivers
+v00000220fc5480e0_0 .net "cry", 0 0, L_00000220fc5ba9e0;  alias, 1 drivers
+v00000220fc548b80_0 .net "sum", 0 0, L_00000220fc5bacf0;  alias, 1 drivers
+S_00000220fc550de0 .scope module, "half_adder_i3" "half_adder" 3 55, 3 6 0, S_00000220fc54e090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cry";
+L_00000220fc5baa50 .functor XOR 1, L_00000220fc5b8360, L_00000220fc5ba9e0, C4<0>, C4<0>;
+L_00000220fc5bb380 .functor AND 1, L_00000220fc5b8360, L_00000220fc5ba9e0, C4<1>, C4<1>;
+v00000220fc548360_0 .net "a", 0 0, L_00000220fc5b8360;  alias, 1 drivers
+v00000220fc548ea0_0 .net "b", 0 0, L_00000220fc5ba9e0;  alias, 1 drivers
+v00000220fc548c20_0 .net "cry", 0 0, L_00000220fc5bb380;  alias, 1 drivers
+v00000220fc548860_0 .net "sum", 0 0, L_00000220fc5baa50;  alias, 1 drivers
+    .scope S_00000220fc54c4b0;
+T_0 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000220fc5b8860_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000220fc5b8540_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v00000220fc5b8540_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v00000220fc5b8540_0;
+    %parti/s 4, 0, 2;
+    %store/vec4 v00000220fc5b8fe0_0, 0, 4;
+    %load/vec4 v00000220fc5b8540_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000220fc5b9440_0, 0, 32;
+    %delay 10, 0;
+    %load/vec4 v00000220fc5b8900_0;
+    %load/vec4 v00000220fc5b9440_0;
+    %parti/s 4, 0, 2;
+    %cmp/ne;
+    %jmp/0xz  T_0.2, 4;
+    %vpi_call 2 24 "$display", "Output mismatch when incrementing for\012entry ", v00000220fc5b8540_0, " expected ", &PV<v00000220fc5b9440_0, 0, 4>, " but got a sum of ", v00000220fc5b8900_0 {0 0 0};
+T_0.2 ;
+    %load/vec4 v00000220fc5b87c0_0;
+    %load/vec4 v00000220fc5b9440_0;
+    %parti/s 1, 4, 4;
+    %cmp/ne;
+    %jmp/0xz  T_0.4, 4;
+    %vpi_call 2 27 "$display", "Output mismatch when incrementing for\012entry ", v00000220fc5b8540_0, " expected ", &PV<v00000220fc5b9440_0, 4, 1>, " but got a cry of ", v00000220fc5b87c0_0 {0 0 0};
+T_0.4 ;
+    %load/vec4 v00000220fc5b8540_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000220fc5b8540_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000220fc5b8860_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000220fc5b8540_0, 0, 32;
+T_0.6 ;
+    %load/vec4 v00000220fc5b8540_0;
+    %cmpi/s 3, 0, 32;
+    %jmp/0xz T_0.7, 5;
+    %load/vec4 v00000220fc5b8540_0;
+    %parti/s 4, 0, 2;
+    %store/vec4 v00000220fc5b8fe0_0, 0, 4;
+    %load/vec4 v00000220fc5b8fe0_0;
+    %pad/u 32;
+    %store/vec4 v00000220fc5b9440_0, 0, 32;
+    %delay 10, 0;
+    %load/vec4 v00000220fc5b8900_0;
+    %load/vec4 v00000220fc5b9440_0;
+    %parti/s 4, 0, 2;
+    %cmp/ne;
+    %jmp/0xz  T_0.8, 4;
+    %vpi_call 2 39 "$display", "Output mismatch when not incrementing for\012entry ", v00000220fc5b8540_0, " expected ", &PV<v00000220fc5b9440_0, 0, 4>, " but got a sum of ", v00000220fc5b8900_0 {0 0 0};
+T_0.8 ;
+    %load/vec4 v00000220fc5b87c0_0;
+    %cmpi/ne 0, 0, 1;
+    %jmp/0xz  T_0.10, 4;
+    %vpi_call 2 42 "$display", "Output mismatch when not incrementing for\012entry ", v00000220fc5b8540_0, " expected ", &PV<v00000220fc5b9440_0, 4, 1>, " but got a cry of ", v00000220fc5b87c0_0 {0 0 0};
+T_0.10 ;
+    %load/vec4 v00000220fc5b8540_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000220fc5b8540_0, 0, 32;
+    %jmp T_0.6;
+T_0.7 ;
+    %end;
+    .thread T_0;
+    .scope S_00000220fc54c4b0;
+T_1 ;
+    %vpi_call 2 54 "$dumpfile", "incrementer_waves.vcd" {0 0 0};
+    %vpi_call 2 55 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000220fc54e090 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "incrementer_top.v";
+    "incrementer.v";
