@@ -1,2 +1,1 @@
-# CSE-120-Files
-Coding done while in CSE 120 Class
+These files contain my pathway to learning to develop a complete microprocessor from scratch
