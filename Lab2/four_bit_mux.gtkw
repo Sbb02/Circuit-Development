@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
+[*] Wed Feb 23 05:01:30 2022
+[*]
+[dumpfile] "C:\Users\Soham\Desktop\Study\CSE 120\Labs\Lab2\four_bit_mux_waves.vcd"
+[dumpfile_mtime] "Wed Feb 23 04:33:52 2022"
+[dumpfile_size] 1317
+[savefile] "C:\Users\Soham\Desktop\Study\CSE 120\Labs\Lab2\four_bit_mux.gtkw"
+[timestart] 0
+[size] 1920 1033
+[pos] -187 -184
+*-4.735779 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] four_bit_mux_top.
+[treeopen] four_bit_mux_top.four_bit_mux.
+[sst_width] 288
+[signals_width] 185
+[sst_expanded] 1
+[sst_vpaned_height] 306
+@22
+[color] 1
+four_bit_mux_top.four_bit_mux.a[3:0]
+[color] 1
+four_bit_mux_top.four_bit_mux.b[3:0]
+[color] 1
+four_bit_mux_top.four_bit_mux.sel
+[color] 1
+four_bit_mux_top.four_bit_mux.y[3:0]
+@200
+-
+-two bit mux 0
+@28
+four_bit_mux_top.four_bit_mux.two_bit_mux_i1.a
+four_bit_mux_top.four_bit_mux.two_bit_mux_i1.b
+four_bit_mux_top.four_bit_mux.two_bit_mux_i1.s
+four_bit_mux_top.four_bit_mux.two_bit_mux_i1.y
+[pattern_trace] 1
+[pattern_trace] 0
